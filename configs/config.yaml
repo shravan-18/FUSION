@@ -1,0 +1,42 @@
+# Training configuration
+training:
+  checkpoints_dir: 'ckpts'
+  batch_size: 12
+  learning_rate_g: 2e-04
+  end_epoch: 1000
+  img_extension: '.png'
+  image_size: 512
+  beta1: 0.5
+  beta2: 0.999
+  wd_g: 0.00005
+  wd_d: 0.00000
+  lambda_mse: 1.0
+  lambda_vgg: 0.02
+
+# Dataset paths
+dataset:
+  train:
+    EUVP:
+      raw: '/path/to/EUVP/raw (A)'
+      reference: '/path/to/EUVP/reference (B)'
+    SUIM-E:
+      raw: '/path/to/SUIM-E/raw (A)'
+      reference: '/path/to/SUIM-E/reference (B)'
+    UIEB:
+      raw: '/path/to/UIEB/raw-890'
+      reference: '/path/to/UIEB/reference-890'
+  test:
+    inp_dir: "/path/to/test/Inp"
+    gt_dir: "/path/to/test/GTr"
+    mode: "Nat"  # Testing mode
+    start: 1  # Testing start
+    end: 1   # Testing end
+
+# Model configuration
+model:
+  in_channels: 3
+  out_channels: 3
+  kernel_sizes: [3, 5, 7]  # For R, G, B channels
+  reduction_ratio: 16
+  pool_types: ['avg', 'max']
+  

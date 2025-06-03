@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <title>FUSION: Frequency-guided Underwater Spatial Image Reconstruction</title> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FUSION: Frequency-guided Underwater Spatial Image recOnstructioN</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Jaskaran&nbsp;Singh&nbsp;Walia<sup>*</sup><sup>1</sup>,</span>
+            <span class="author-block">
+              Shravan&nbsp;Venkatraman<sup>*</sup><sup>1</sup>,</span>
+            <span class="author-block">
+              Pavithra&nbsp;L&nbsp;K<sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Vellore Institute of Technology, Chennai, India</span>
+          </div>
+          <!-- <h2 class="subtitle has-text-centered">
+            <b style="color:tomato;">Under Review</b><br><br>
+          </h2> -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.01243" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/shravan-18/FUSION" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        FUSION jointly leverages spatial and frequency domains to remove color casts, restore detail, and balance underwater images.<br>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<br>
+<center>
+  <img src="./assets/overallArch.png" alt="FUSION Architecture" style="width:850px;height:300px;">
+</center>
+<br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Underwater images suffer from severe degradations, including color distortions, reduced visibility, and loss of structural details due to wavelength-dependent attenuation and scattering. Existing enhancement methods primarily focus on spatial-domain processing, neglecting the frequency domain’s potential to capture global color distributions and long-range dependencies. To address these limitations, we propose <strong>FUSION</strong>, a dual-domain deep learning framework that jointly leverages spatial and frequency domain information. FUSION independently processes each RGB channel through multi-scale convolutional kernels and adaptive attention mechanisms in the spatial domain, while simultaneously extracting global structural information via FFT-based frequency attention. A Frequency Guided Fusion module integrates complementary features from both domains, followed by inter-channel fusion and adaptive channel recalibration to ensure balanced color distributions. Extensive experiments on benchmark datasets (UIEB, EUVP, SUIM-E) demonstrate that FUSION achieves state-of-the-art performance, consistently outperforming existing methods in reconstruction fidelity (highest PSNR of 23.717 dB and SSIM of 0.883 on UIEB), perceptual quality (lowest LPIPS of 0.112 on UIEB), and visual enhancement metrics (best UIQM of 3.414 on UIEB), while requiring significantly fewer parameters (0.28 M) and lower computational complexity, demonstrating its suitability for real-time underwater imaging applications. 
+          </p>
+          <br>
+          <h2 class="title is-3"><center>Contributions</center></h2>
+          <ul>
+            <li>We introduce a novel dual-domain framework that combines multi-scale spatial feature extraction with FFT-based frequency attention to address wavelength-dependent degradations in underwater imagery.</li>
+            <li>We design a dedicated Frequency Attention module that preserves phase information while adaptively weighting frequency magnitudes to capture global structural cues.</li>
+            <li>We propose an inter-channel fusion and adaptive channel calibration stage to balance R-G-B intensities, removing residual color casts common in underwater scenes.</li>
+            <li>We achieve state-of-the-art results on UIEB, EUVP, and SUIM-E with only 0.28 M parameters and 36.73 GFLOPs, enabling real-time performance on resource-constrained platforms. </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<br>
+<center>
+  <img src="./assets/modelArch.png" alt="FUSION Architecture" style="width:900px;height:400px;">
+</center>
+<br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><b>FUSION: Method</b></h2>
+        <div class="content has-text-justified">
+          <p>
+            The FUSION framework enhances underwater images by processing them in both spatial and frequency domains. Starting with an input image of size <em>H×W×3</em>, we split it into its three color channels (<em>D<sub>R</sub>, D<sub>G</sub>, D<sub>B</sub></em>). In the spatial path, each channel undergoes multi-scale convolutions (3×3 for red, 5×5 for green, and 7×7 for blue) followed by channel and spatial attention (CBAM) and a residual connection to preserve fine details. Concurrently, in the frequency path, each channel is transformed via a 2D FFT to extract its magnitude, which is refined through two 1×1 convolutions and a Frequency Attention mechanism that produces weighted magnitude maps. The refined magnitude is recombined with original phase information and passed through an IFFT to yield frequency-domain features.
+          </p>
+          <p>
+            For each channel, spatial and frequency features are concatenated and fused via a small convolutional block (Frequency Guided Fusion), followed by adding back the original input channel in a residual fashion. The three fused channels are then concatenated to form a joint representation, which is projected to a higher-dimensional space and further combined with aggregated frequency features through a learned transform. A global CBAM module refines this fused representation, and a decoder reconstructs a preliminary enhanced RGB image. Finally, an Adaptive Channel Calibration step computes per-channel scaling factors from global image statistics and applies them to balance color distributions, yielding the final enhanced output. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+<br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results: Qualitative on UIEB. -->
+    <h2 class="title is-3 has-text-centered"><b>Qualitative Results: UIEB Dataset</b></h2>
+    <br>
+    <center>
+      <img src="./assets/uieb.png" alt="UIEB Qualitative Comparison" style="width:1200px;height:230px;">
+    </center>
+    <p class="has-text-centered is-size-6" style="margin-top:10px;">
+      Visual comparison of FUSION against other state-of-the-art methods on the UIEB test set; note the restored natural colors and enhanced details.
+    </p>
+    <br>
+    <!-- Results: Qualitative on EUVP. -->
+    <h2 class="title is-3 has-text-centered"><b>Qualitative Results: EUVP Dataset</b></h2>
+    <br>
+    <center>
+      <img src="./assets/euvp.png" alt="EUVP Qualitative Comparison" style="width:1200px;height:230px;">
+    </center>
+    <p class="has-text-centered is-size-6" style="margin-top:10px;">
+      FUSION effectively recovers contrast and corrects color casts compared to competing approaches on EUVP.
+    </p>
+    <br>
+    <!-- Results: Ablation Study. -->
+    <h2 class="title is-3 has-text-centered"><b>Ablation Study: Component Contributions</b></h2>
+    <br>
+    From the ablation studies across UIEB and EUVP, it is evident that each architectural component contributes meaningfully to overall performance. Removing frequency attention, branch, or guided fusion consistently leads to notable degradation in perceptual quality (higher LPIPS, lower UIQM and UISM), affirming the critical role of frequency-aware design in FUSION. Similarly, channel calibration and attention blocks - both local and global - also drive significant gains, especially in structural sharpness and perceptual realism. Interestingly, global attention appears to be particularly vital in retaining fine-grained global coherence, while local attention improves texture fidelity. Models stripped of frequency modules or reduced to spatial-only designs suffer from reduced enhancement quality, confirming the synergy between spectral and spatial representations in underwater image enhancement.
+    <br>
+
+    <br>
+    <center>
+      <img src="./assets/ablation.png" alt="Ablation Study Visuals" style="width:1200px;height:400px;">
+    </center>
+  
+    <p class="has-text-centered is-size-6" style="margin-top:10px;">
+      Visual examples showing the impact of removing key modules: frequency attention, frequency branch, fusion, channel calibration, local attention, and global attention.
+    </p>
+    <br>
+    <!-- Results: Efficiency Analysis. -->
+    <h2 class="title is-3 has-text-centered"><b>Efficiency Analysis</b></h2>
+    <br>
+    <center>
+      <img src="./assets/plot.png" alt="Parameter vs GFLOPs Trade-off" style="width:600px;height:500px;">
+    </center>
+    <p class="has-text-centered is-size-6" style="margin-top:10px;">
+      FUSION achieves a favorable balance between parameter count (0.28 M) and computational cost (36.73 GFLOPs), outperforming larger models in both quality and efficiency.
+    </p>
+    <br>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{FUSION,
+  author    = {Jaskaran Singh Walia and Shravan Venkatraman and Pavithra LK},
+  title={FUSION: Frequency-guided Underwater Spatial Image recOnstructioN}, 
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month     = {June},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

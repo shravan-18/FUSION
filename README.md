@@ -4,7 +4,7 @@
 <img src="https://github.com/Amazingren/NTIRE2024_ESR/blob/main/figs/logo.png" width="400px"/> 
 </div>
 
-This repository contains the official implementation of the paper: [**FUSION: Frequency-guided Underwater Spatial Image recOnstructioN**](https://arxiv.org/abs/2504.01243) 
+This repository contains the official implementation of the paper: [**FUSION: Frequency-guided Underwater Spatial Image recOnstructioN**](https://arxiv.org/abs/2504.01243)  
 *Jaskaran Singh Walia\*, Shravan Venkatraman\*, Pavithra L K*  
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops (NTIRE) 2025
 

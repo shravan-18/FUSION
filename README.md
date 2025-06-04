@@ -100,8 +100,13 @@ The `--compare` flag generates side-by-side comparisons of original and enhanced
 ## Results
 
 <div align="center">
-  <img src="assets/results.png" width="100%">
-  <p>Figure: Visual comparisons on different underwater datasets.</p>
+  <img src="assets/uieb.png" width="100%">
+  <p>Figure: Visual comparisons on the UIEB dataset.</p>
+</div>
+
+<div align="center">
+  <img src="assets/euvp.png" width="100%">
+  <p>Figure: Visual comparisons on the EUVP dataset.</p>
 </div>
 
 ### Quantitative Comparison

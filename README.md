@@ -29,7 +29,7 @@ Underwater images suffer from severe degradations, including color distortions, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/FUSION.git
+git clone https://github.com/shravan-18/FUSION.git
 cd FUSION
 
 # Create a conda environment (optional)
